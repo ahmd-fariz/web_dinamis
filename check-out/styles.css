@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: grid;
+  grid-template-areas: 
+  "nav"
+  "main-container"
+  "subtotal-and-checkout";
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #efefef;
+}
+header {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #43281C;
+  color: #FBF2C0;
+  font-size: 16px;
+}
+.coffee-masters-logo {
+  height: 30px;
+  padding: 0 5px 0 5px;
+  margin-top: 4px;
+}
+.page {
+  padding: 30px;
+}
+.main-container {
+  grid-area: main-container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  margin: 0 auto;
+}
+.box {
+  background-color: #eee1d5;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+  margin-bottom: 20px;
+}
+.box-title {
+  color: #885A2D;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.user-input {
+  border-radius: 100px;
+  width: 100%;
+  border: 2px #885A2D solid;
+  background-color: transparent;
+  padding: 8px;
+  text-indent: 18px;
+  font-size: 18px;
+  font-family: inherit;
+}
+.user-input-label {
+  position: absolute;
+  left: 25px;
+  top: -7px;
+  font-size: 11px;
+  color: #885A2D;
+  background-color: #EEE1D5;
+  padding: 0 2px;
+}
+.short-input {
+  max-width: 200px;
+}
+.items {
+  list-style: none;
+  padding: 0;
+}
+.item-options-list {
+  list-style: none;
+  padding: 0;
+}
+.item {
+  border-bottom: 2px #DDB892 solid;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas: 
+    "quantity title price"
+    "quantity options price";
+  row-gap: 8px;
+  padding: 10px 0;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.item-quantity {
+  grid-area: quantity;
+}
+.item-title {
+  grid-area: title;
+  font-weight: bold;
+}
+.item-price {
+  grid-area: price;
+  font-weight: bold;
+}
+.item-option {
+  color: #885A2D;
+  margin-bottom: 5px;
+}
+.subtotal-and-checkout {
+  grid-area: subtotal-and-checkout;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px 10px;
+}
+.checkout {
+  background-color: #DEB993;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 100px;
+  padding: 10px 30px;
+  border: none;
+  font-family: inherit;
+}
+.field-name-values {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+}
+.final-totals {
+  font-weight: bold;
+}
+@media (max-width: 750px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
