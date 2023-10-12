@@ -1,24 +1,27 @@
 <?php
 include "koneksi.php";
-$result = mysqli_query($koneksi, "SELECT * FROM datapengguna WHERE idPengguna='$_GET[idPengguna]'");
+$result = mysqli_query($koneksi, "SELECT * FROM tabel_produk_coffee WHERE kode_produk='$_GET[kode_produk]'");
 while ($data = mysqli_fetch_array($result)) {
-    $nama = $data['nama'];
-    $username = $data['username'];
-    $password = $data['password'];
+    $stok = $data['stok_produk'];
+    $jenis = $data['jenis_produk'];
+    $harga = $data['harga_produk']; 
+    $deskripsi = $data['deskripsi_produk'];
 }
 ?>
 
 <?php
 include "koneksi.php";
 if (isset($_POST['submit'])) {
-    $idPengguna = $_GET['idPengguna'];
-    $nama = $_POST['nama'];
-    $username = $_POST['username'];
-    $passwordPengguna = $_POST['password'];
+    $kodeProduk = $_GET['kode_produk'];
+    $stok = $_POST['stok'];
+    $jenis = $_POST['jenis'];
+    $harga = $_POST['harga'];
+    $deskripsi = $_POST['deskripsi'];
+    $foto = $_POST['foto_produk'];
 
-    $edit = mysqli_query($koneksi, "UPDATE datapengguna set nama='$nama', username='$username', password='$passwordPengguna' WHERE idPengguna = '$idPengguna'");
+    $edit = mysqli_query($koneksi, "UPDATE tabel_produk_coffee set stok_produk='$stok', jenis_produk='$jenis', harga_produk='$harga', deskripsi_produk='$deskripsi', foto_produk='$foto' WHERE kode_produk = '$kodeProduk'");
     if ($edit) {
-        header("Location: tables.php");
+        header("Location: tables_produk.php");
     }
 }
 ?>
@@ -50,21 +53,21 @@ if (isset($_POST['submit'])) {
                                 </div>
                                 <div class="card-body">
                                     <form method="post">
-                                        <div class="form-group"><label class="small mb-1" for="inputUsernameAddress">Name</label><input class="form-control py-4" id="inputNameAddress" type="Name" placeholder="Enter Name address" name="nama" value="<?= @$nama ?>" /></div>
-                                        <div class="form-group"><label class="small mb-1" for="inputNameAddress">Username</label><input class="form-control py-4" id="inputUsernameAddress" type="Username" placeholder="Enter Username address" name="username" value="<?= @$username ?>" /></div>
-                                        <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" name="password" value="<?= @$password ?>" /></div>
+                                        <div class="form-group"><label class="small mb-1" for="inputUsernameAddress">Stok</label><input class="form-control py-4" id="inputNameAddress" type="Name" placeholder="Enter Stok Produk" name="stok" value="<?= @$stok ?>" /></div>
+                                        <div class="form-group"><label class="small mb-1" for="inputNameAddress">Jenis</label><input class="form-control py-4" id="inputUsernameAddress" type="Username" placeholder="Enter Jenis Produk" name="jenis" value="<?= @$jenis ?>" /></div>
+                                        <div class="form-group"><label class="small mb-1" for="inputPassword">Harga</label><input class="form-control py-4" id="inputPassword" type="text" placeholder="Enter Harga" name="harga" value="<?= @$harga ?>" /></div>
+                                        <div class="form-group"><label class="small mb-1" for="inputPassword">Deskripsi</label><input class="form-control py-4" id="inputPassword" type="text" placeholder="Enter Deskripsi" name="deskripsi" value="<?= @$deskripsi ?>" /></div>
+                                        <div class="form-group"><label class="small mb-1" for="inputConfirmPicture">Confirm Picture</label><input class="form-control py-4" id="inputConfirmPicture" type="file" placeholder="Confirm Picture" name="file"/></div>
                                         <div class="form-group">
-                                            <div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /><label class="custom-control-label" for="rememberPasswordCheck">Remember password</label></div>
                                         </div>
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="password.php">Forgot Password?</a>
                                             <button class="btn btn-primary" type="submit" name="submit">Edit</button>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center">
                                     <div class="small"><a href="register.php">Need an account? Sign up!</a></div>
-                                </div>
+                                </div>   
                             </div>
                         </div>
                     </div>

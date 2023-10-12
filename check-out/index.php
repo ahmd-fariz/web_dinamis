@@ -29,11 +29,11 @@
         <ul class="items">
           <li class="item">
             <div class="item-quantity">1x</div>
-            <div class="item-title"><?=$data['jenis_produk']?></div>
-            <div class="item-price"><?=$data['harga_produk']?></div>
-            </ul>
-          </li>
-         <!-- <li class="item">
+            <div class="item-title"><?= $data['jenis_produk'] ?></div>
+            <div class="item-price"><?= $data['harga_produk'] ?></div>
+        </ul>
+        </li>
+        <!-- <li class="item">
             <div class="item-quantity">1x</div>
             <div class="item-title">Cappuccino</div>
             <div class="item-price">$3.85</div>
@@ -50,7 +50,7 @@
               <li class="item-option">Butter</li>
             </ul>
           </li>
--->  </ul>
+--> </ul>
       </section>
       <div class="name-and-payment">
         <section class="box">

@@ -112,26 +112,28 @@
                             table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>.</div>
                     </div>
                     <div class="card mb-4">
-                        <div class="card-header"><i class="fas fa-table mr-1"></i>DataTable Admin</div>
+                        <div class="card-header"><i class="fas fa-table mr-1"></i>DataTable Produk</div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>Name</th>
-                                            <th>Username</th>
-                                            <th>Password</th>
+                                            <th>Kode</th>
+                                            <th>Stok</th>
+                                            <th>Jenis</th>
+                                            <th>Harga</th>
+                                            <th>Deskripsi</th>
                                             <th>Foto</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>No</th>
-                                            <th>Name</th>
-                                            <th>Username</th>
-                                            <th>Password</th>
+                                            <th>Kode</th>
+                                            <th>Stok</th>
+                                            <th>Jenis</th>
+                                            <th>Harga</th>
+                                            <th>Deskripsi</th>
                                             <th>Foto</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -140,17 +142,18 @@
                                         <?php
                                         include "koneksi.php";
                                         $no = 1;
-                                        $query = mysqli_query($koneksi, "SELECT * FROM datapengguna");
+                                        $query = mysqli_query($koneksi, "SELECT * FROM tabel_produk_coffee");
                                         while ($data = mysqli_fetch_array($query)) {
                                             echo "<tr>";
                                             echo "<td>" . $no;
                                             $no++ . "</td>";
-                                            echo "<td>" . $data['nama'] . "</td>";
-                                            echo "<td>" . $data['username'] . "</td>";
-                                            echo "<td>" . $data['password'] . "</td>";
-                                            echo "<td><img src='img/" . $data['foto'] . "' height='100'></td>";
-                                            echo "<td> <a href ='edit.php?idPengguna=" . $data['idPengguna'] . "'>Edit || </a>
-                                            <a href ='hapus.php?idPengguna=" . $data['idPengguna'] . "'>Hapus</a><td>";
+                                            echo "<td>" . $data['stok_produk'] . "</td>";
+                                            echo "<td>" . $data['jenis_produk'] . "</td>";
+                                            echo "<td>" . $data['harga_produk'] . "</td>";
+                                            echo "<td>" . $data['deskripsi_produk'] . "</td>";
+                                            echo "<td><img src='img/" . $data['foto_produk'] . "' height='100'></td>";
+                                            echo "<td> <a href ='edit_produk.php?kode_produk=" . $data['kode_produk'] . "'>Edit || </a>
+                                            <a href ='hapus_produk.php?kode_produk=" . $data['kode_produk'] . "'>Hapus</a><td>";
                                             echo "</tr>";
                                         }
                                         ?>

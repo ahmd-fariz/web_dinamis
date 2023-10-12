@@ -99,18 +99,18 @@
             include "koneksi.php";
             $query = "SELECT * FROM tabel_produk_coffee";
             $result = mysqli_query($koneksi, $query);
-            while($data = mysqli_fetch_array($result)){?>
-            
-            <a href="../check-out/index.php?id=<?=$data['kode_produk']?>" class="box">
-                <img src="image/menu-1.png" alt="">
-                <div class="content">
-                    <h3><?=$data['jenis_produk'];?></h3>
-                    <p><?=$data['deskripsi_produk']?></p>
-                    <span>Rp.<?php echo $data['harga_produk'];?></span>
-                </div>
-            </a>
-            <?php }?>
-        <!--    <a href="#" class="box">
+            while ($data = mysqli_fetch_array($result)) { ?>
+
+                <a href="../check-out/index.php?id=<?= $data['kode_produk'] ?>" class="box">
+                    <img src="image/menu-1.png" alt="">
+                    <div class="content">
+                        <h3><?= $data['jenis_produk']; ?></h3>
+                        <p><?= $data['deskripsi_produk'] ?></p>
+                        <span>Rp.<?php echo $data['harga_produk']; ?></span>
+                    </div>
+                </a>
+            <?php } ?>
+            <!--    <a href="#" class="box">
                 <img src="image/menu-2.png" alt="">
                 <div class="content">
                     <h3>our special coffee</h3>
