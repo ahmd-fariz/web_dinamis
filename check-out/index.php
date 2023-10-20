@@ -78,19 +78,59 @@
         </section>
       </div>
     </div>
-    <section class="subtotal-and-checkout">
+    <?php
+          class Hitung{
+        private $dta,
+        $Tax,
+        $ttal,
+        $oprl;
+
+        public function __construct($ttal,$dta,$Tax,$oprl)
+        {
+          $this->ttal = $ttal;
+          $this->dta = $dta;
+          $this->Tax = $Tax;
+          $this->oprl = $oprl;
+        }
+
+        public function getOprl(){
+          return $this->oprl;
+        }
+
+        public function getTax(){
+          return $this->Tax;
+        }
+
+        public function HitungStruck(){
+          return $this->ttal = $this->Tax + $this->oprl + $this->dta; 
+        }
+      }
+
+      $produk1 = new Hitung(0 , $data['harga_produk'], 6000, 12000);
+      ?>
+
+    <section class="subtotal-and-checkout" method="post">
       <p class="field-name-values">
         <span>Subtotal:</span>
-        <span>$9.65</span>
+        <span><?= $data['harga_produk'] ?></span>
       </p>
       <p class="field-name-values">
         <span>Tax:</span>
-        <span>$0.82</span>
+        <span name="tax">Rp. <?php echo $produk1->getTax()?></span>
+      </p>
+      <p class="field-name-values">
+        <span>Diskon:</span>
+        <span>0%</span>
+      </p>
+      <p class="field-name-values">
+        <span>Operasional:</span>
+        <span>Rp. <?php echo $produk1->getOprl();?></span>
       </p>
       <p class="field-name-values final-totals">
         <span>Total:</span>
-        <span>$10.47</span>
+        <span name="total">Rp. <?php echo $produk1->HitungStruck()?></span>
       </p>
+      
     </section>
     <input class="checkout" href="" type="submit" value="Check Out">
   </div>

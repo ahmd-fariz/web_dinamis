@@ -87,10 +87,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Tables
                         </a>
-                        <a class="nav-link" href="tables_produk.php"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables Produk</a
-                            >
+                        <a class="nav-link" href="tables_produk.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Tables Produk
+                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">

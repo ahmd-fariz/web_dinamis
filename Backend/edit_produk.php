@@ -4,7 +4,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM tabel_produk_coffee WHERE kode_p
 while ($data = mysqli_fetch_array($result)) {
     $stok = $data['stok_produk'];
     $jenis = $data['jenis_produk'];
-    $harga = $data['harga_produk']; 
+    $harga = $data['harga_produk'];
     $deskripsi = $data['deskripsi_produk'];
 }
 ?>
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                                         <div class="form-group"><label class="small mb-1" for="inputNameAddress">Jenis</label><input class="form-control py-4" id="inputUsernameAddress" type="Username" placeholder="Enter Jenis Produk" name="jenis" value="<?= @$jenis ?>" /></div>
                                         <div class="form-group"><label class="small mb-1" for="inputPassword">Harga</label><input class="form-control py-4" id="inputPassword" type="text" placeholder="Enter Harga" name="harga" value="<?= @$harga ?>" /></div>
                                         <div class="form-group"><label class="small mb-1" for="inputPassword">Deskripsi</label><input class="form-control py-4" id="inputPassword" type="text" placeholder="Enter Deskripsi" name="deskripsi" value="<?= @$deskripsi ?>" /></div>
-                                        <div class="form-group"><label class="small mb-1" for="inputConfirmPicture">Confirm Picture</label><input class="form-control py-4" id="inputConfirmPicture" type="file" placeholder="Confirm Picture" name="file"/></div>
+                                        <div class="form-group"><label class="small mb-1" for="inputConfirmPicture">Confirm Picture</label><input class="form-control py-4" id="inputConfirmPicture" type="file" placeholder="Confirm Picture" name="file" /></div>
                                         <div class="form-group">
                                         </div>
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
                                 </div>
                                 <div class="card-footer text-center">
                                     <div class="small"><a href="register.php">Need an account? Sign up!</a></div>
-                                </div>   
+                                </div>
                             </div>
                         </div>
                     </div>

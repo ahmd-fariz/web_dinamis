@@ -191,8 +191,10 @@ section {
 }
 
 .about .row .image img {
-    width: 100%;
-    animation: aboutImage 4s linear infinite;
+    /* width: 100%;
+    animation: aboutImage 4s linear infinite; */
+    width: 78%;
+    border-radius: 20px;
 }
 
 @keyframes aboutImage {
@@ -237,7 +239,7 @@ section {
     flex: 1 1 15rem;
     padding: 1.5rem;
     text-align: center;
-    border: var(--border);
+    /* border: var(--border); */
     border-radius: var(--border-radius);
 }
 

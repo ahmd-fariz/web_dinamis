@@ -27,19 +27,19 @@
                                     <form method="post" enctype="multipart/form-data">
                                         <div class="form-row">
                                             <div class="col-md-6">
-                                                <div class="form-group"><label class="small mb-1" for="inputFirstName">Name</label><input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter first name" name="nama"/></div>
+                                                <div class="form-group"><label class="small mb-1" for="inputFirstName">Name</label><input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter first name" name="nama" /></div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-group"><label class="small mb-1" for="inputUsername">Username</label><input class="form-control py-4" id="inputUsername" type="text" placeholder="Enter Username" name="username"/></div>
+                                                <div class="form-group"><label class="small mb-1" for="inputUsername">Username</label><input class="form-control py-4" id="inputUsername" type="text" placeholder="Enter Username" name="username" /></div>
                                             </div>
                                         </div>
                                         <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Email</label><input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" /></div>
                                         <div class="form-row">
                                             <div class="col-md-6">
-                                                <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" name="password"/></div>
+                                                <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" name="password" /></div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-group"><label class="small mb-1" for="inputConfirmPicture">Confirm Picture</label><input class="form-control py-4" id="inputConfirmPicture" type="file" placeholder="Confirm Picture" name="file"/></div>
+                                                <div class="form-group"><label class="small mb-1" for="inputConfirmPicture">Confirm Picture</label><input class="form-control py-4" id="inputConfirmPicture" type="file" placeholder="Confirm Picture" name="file" /></div>
                                             </div>
                                         </div>
                                         <div class="form-group mt-4 mb-0"><input type="submit" class="btn btn-primary btn-block" name="login"></input></div>

@@ -4,4 +4,3 @@ $hapus = mysqli_query($koneksi, "DELETE FROM dataPengguna WHERE idPengguna = '$_
 if($hapus){
     header("Location: tables.php");
 }
-?>
