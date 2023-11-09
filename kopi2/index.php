@@ -68,9 +68,12 @@
 
             <div class="content">
                 <h3 class="title">what's make our coffee special!</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum laboriosam reprehenderit ipsa id
-                    repellat odio illum, voluptas, necessitatibus assumenda adipisci. Hic, maiores iste? Excepturi illo
-                    dolore mollitia qui quia.</p>
+                <p>
+                    Selamat datang di Kedai Kopi Fariz Tempat dimana setiap cangkir adalah perjalanan ke dalam kehidupan rasa dan aroma.
+                    Kami merayakan Kopi dengan setiap seduhan, menhadirkan pengalaman yang menghangatkan jiwa,
+                    Setiap cangkir adalah cerita yang kami ingin kami bagikan dengan Anda. Bergabunglah dengan kami di perjalanan menuju Kopi
+                    terbaik yang penuh Cinta dan Senyum.
+                </p>
                 <a href="#" class="btn">read more</a>
                 <div class="icons-container">
                     <div class="icons">
@@ -93,7 +96,6 @@
     <!-- MENU -->
     <section class="menu" id="menu">
         <h1 class="heading">our menu <span>popular menu</span></h1>
-
         <div class="box-container">
             <?php
             include "koneksi.php";
@@ -174,8 +176,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, earum quis dolorem quaerat tenetur
-                        illum.</p>
+                    <p>Kopi nya enak dan semua makanan nya sangat memuaskan perut saya sangat memanjakan lidah</p>
                     <h3>john deo</h3>
                     <span>satisfied client</span>
                 </div>
@@ -191,8 +192,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum optio quasi ut, illo ipsam
-                        assumenda.</p>
+                    <p>Semua makanan yang ada di toko ini enak dan membuat mood kita menjadi naik</p>
                     <h3>john deo</h3>
                     <span>satisfied client</span>
                 </div>
@@ -208,8 +208,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius asperiores aliquam hic quis!
-                        Eligendi, aliquam.</p>
+                    <p>Saya suka dengan makanan dan minuman nya harga nya pun terjangkau </p>
                     <h3>john deo</h3>
                     <span>satisfied client</span>
                 </div>
@@ -225,8 +224,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi modi perspiciatis distinctio
-                        velit aliquid a.</p>
+                    <p>Joss sangat memanjakan lidah dan membuat saya merasa puas makan dan nongkrong di toko ini</p>
                     <h3>john deo</h3>
                     <span>satisfied client</span>
                 </div>
@@ -239,7 +237,7 @@
     <section class="book" id="book">
         <h1 class="heading">booking <span>reserve a table</span></h1>
 
-        <form action="">
+        <form action="mailto:ahmadfarizmaulana4@gmail.com" method="post" enctype="text/plain">
             <input type="text" placeholder="Name" class="box">
             <input type="email" placeholder="Email" class="box">
             <input type="number" placeholder="Number" class="box">
